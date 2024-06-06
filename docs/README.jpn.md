@@ -85,9 +85,7 @@ git clone https://github.com/abus-aikorea/voice-gulliver.git
    - Voice-Gulliverインストールはインターネット接続を必要とし、システムによってはインストールに1時間以上かかることがあります。
    - インストール中は絶対にWindowsコマンドウィンドウを終了しないでください。
    - インストール中に問題が発生した場合は、installer_filesフォルダを削除してstart.batを再実行してください。
-#### Browserが自動的に実行されない場合
-- Windows-Commnadウィンドウを終了し、start.batを再実行するか、
-- ブラウザを直接実行し、Windowsコマンドウィンドウに表示されているアドレス（例：**http://127.0.0.1:7892**）をアドレスウィンドウに入力します。
+
 
 
 ### 実行画面
@@ -102,6 +100,26 @@ https://github.com/abus-aikorea/voice-gulliver/assets/161691694/bb7dd2f2-9863-49
   - Windowsにインストールしたffmepg、CUDAパッケージを削除します（選択した場合）
 
 * Voice-Gulliverは**ポータブル**インストールがデフォルトです。プログラムの削除は、インストールフォルダを削除するだけで十分です。
+
+
+## ヒントとコツ
+
+#### Browserが自動的に実行されない場合
+- Windows-Commnadウィンドウを終了し、start.batを再実行するか、
+- ブラウザを直接実行し、Windowsコマンドウィンドウに表示されているアドレス（例：**http://127.0.0.1:7892**）をアドレスウィンドウに入力します。
+
+#### CUDA Out-Of-Memoryエラーが発生した場合
+- Windowsタスクマネージャ - [パフォーマンス]タブでGPUメモリの状態を確認します。 
+- Denoiseレベルを0または1に設定します。 Denoiseレベル2は8GB以上のGPUメモリを必要とします。
+- Compute Type を int 型に設定します。 floatタイプの品質は良いですが、より多くのGPUメモリが必要です。
+
+#### 字幕の品質を向上させるには？
+- 字幕の品質は、より大きなWhisperモデルを使用するほど良くなる傾向がありますが、必ずしもそうではありません。 large > medium > small > base > tiny 
+- Compute Typeの中では、floatタイプのパフォーマンスが良いです。 int型はモデル量子化によりGPU使用量を下げ、スピードを高めたモデルです。一方、パフォーマンスは低下します。 
+- Denoiseレベルを上げると背景音をより多く除去し、残っているボイスだけ音声認識に使用するようになります。常に良い結果を保証するわけではありません。
+
+
+
 
 ## 注意事項
 Windows Defenderが誤ってバッチファイルをトロイの木馬として認識している場合、これはしばしば「False Positive」と呼ばれます。この問題を解決するには、次の手順を実行できます。
@@ -141,6 +159,4 @@ Windows Defenderが誤ってバッチファイルをトロイの木馬として�
 
 
 ## 著作権
-<p align="center">
-  <img src="docs/images/ABUS_logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)
-</p>
+  <img src="images/ABUS_logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)

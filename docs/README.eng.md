@@ -85,9 +85,7 @@ git clone https://github.com/abus-aikorea/voice-gulliver.git
    - Voice-Gulliver installation requires an Internet connection, and depending on the system, installation may take more than an hour. 
    - Never close the Windows-Command window during installation.
    - If a problem occurs during installation, delete the installer_files folder and run start.bat again.
-#### If Browser does not run automatically
-- Close the Windows-Commnad window and run start.bat again.
-- Run the browser directly and enter the address displayed in the Windows-Command window (e.g. **http://127.0.0.1:7892**) in the address bar.
+
 
 
 ### Run screen
@@ -103,6 +101,23 @@ https://github.com/abus-aikorea/voice-gulliver/assets/161691694/bb7dd2f2-9863-49
 
 * Voice-Gulliver has **portable** installation as standard. To uninstall the program, deleting the installation folder is sufficient.
 
+
+## Tips & Tricks
+
+#### If Browser does not run automatically
+- Close the Windows-Commnad window and run start.bat again.
+- Run the browser directly and enter the address displayed in the Windows-Command window (e.g. **http://127.0.0.1:7892**) in the address bar.
+
+#### If a CUDA Out-Of-Memory error occurs
+- Check the GPU memory status in Windows Task Manager - Performance tab. 
+- Set the Denoise level to 0 or 1. Denoise level 2 requires at least 8GB of GPU memory.
+- Set Compute Type to int type. The float type has better quality, but requires more GPU memory.
+
+#### How to improve the quality of subtitles?
+- The quality of subtitles tends to improve with larger Whisper models, but this is not necessarily the case. large > medium > small > base > tiny 
+- Among compute types, float type has good performance. The int type is a model that reduces GPU usage and increases speed through model quantization. On the other hand, performance decreases. 
+- If you increase the denoise level, more background sounds will be removed, and only the remaining voice will be used for voice recognition. It does not always guarantee good results.
+  
 
 ## caution
 When Windows Defender mistakenly recognizes a batch file as a Trojan, this is often called a 'False Positive'. To solve this problem, you can go through the following steps:
@@ -142,6 +157,4 @@ When Windows Defender mistakenly recognizes a batch file as a Trojan, this is of
 
 
 ## Copyright
-<p align="center">
-  <img src="docs/images/ABUS_logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)
-</p>
+  <img src="images/ABUS_logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)

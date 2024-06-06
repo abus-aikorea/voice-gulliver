@@ -85,10 +85,6 @@ git clone https://github.com/abus-aikorea/voice-gulliver.git
    - Voice-Gulliver 설치는 인터넷 연결을 필요로 하며, 시스템에 따라 설치에 1시간 이상이 소요될 수 있습니다. 
    - 설치 중에는 절대 Windows-Command 창을 종료하지 마세요.
    - 설치중 문제가 발생한 경우, installer_files 폴더를 삭제하고 start.bat를 다시 실행하세요.
-#### Browser가 자동으로 실행되지 않는 경우
-- Windows-Commnad 창을 종료하고, start.bat 을 다시 실행하거나
-- Browser를 직접 실행하고, Windows-Command 창에 표시된 주소(예, **http://127.0.0.1:7892** )를 주소창에 입력합니다.
-
 
 
 ### 실행 화면
@@ -103,6 +99,26 @@ https://github.com/abus-aikorea/voice-gulliver/assets/161691694/bb7dd2f2-9863-49
   - Windows 에 설치한 ffmepg, CUDA 패키지를 제거합니다(선택할 경우)
 
 * Voice-Gulliver은 **포터블** 설치가 기본입니다. 프로그램의 제거는 설치 폴더를 삭제하는 것으로 충분합니다.
+
+
+
+## 사용팁
+
+#### Browser가 자동으로 실행되지 않는 경우
+- Windows-Commnad 창을 종료하고, start.bat 을 다시 실행하거나
+- Browser를 직접 실행하고, Windows-Command 창에 표시된 주소(예, **http://127.0.0.1:7892** )를 주소창에 입력합니다.
+
+#### CUDA Out-Of-Memory 오류가 발생하는 경우
+- 윈도우 작업관리자 - 성능 탭에서 GPU 메모리 상태를 확인하세요. 
+- Denoise 레벨을 0 또는 1 로 설정하세요. Denoise 레벨 2 는 8GB 이상의 GPU 메모리를 필요로 합니다.
+- Compute Type 을 int 타입으로 설정하세요. float 타입의 품질이 더 좋지만 더 많은 GPU 메모리를 요구합니다.
+
+#### 자막의 품질을 높이려면?
+- 자막의 품질은 더 큰 Whisper 모델을 사용할 수록 좋아지는 경향은 있지만, 꼭 그런것은 아닙니다. large >  medium > small > base > tiny 
+- Compute Type 중에서는 float 타입의 성능이 좋습니다. int 타입은 모델 양자화를 통해 GPU사용량을 낮추고 속도를 높인 모델입니다. 반면, 성능은 떨어집니다. 
+- Denoise 레벨을 높이면 배경음을 더 많이 제거하고, 남아있는 보이스만 음성인식에 사용하게 됩니다. 항상 좋은 결과를 보장하지는 않습니다.
+
+
 
 
 ## 주의사항
