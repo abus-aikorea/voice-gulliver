@@ -157,4 +157,4 @@ When Windows Defender mistakenly recognizes a batch file as a Trojan, this is of
 
 
 ## Copyright
-  <img src="images/ABUS_logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)
+  <img src="images/AbUS-logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)

@@ -159,5 +159,5 @@ Windows Defender가 실수로 batch 파일을 트로이 목마로 인식하는 �
 
 
 ## 저작권 정보
-  <img src="images/ABUS_logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)
+  <img src="images/AbUS-logo.jpg" width="100" height="100"> by [ABUS](https://abuskorea.imweb.me)
 
