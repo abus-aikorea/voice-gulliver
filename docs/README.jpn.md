@@ -42,6 +42,10 @@ The best gradio web-ui for asr, translation and tts. Easy one click installation
 * `Batch`タブ
   - 大量のファイルをバッチ処理
 
+* `Garage`タブ
+  - 字幕ファイルをアップロードし、翻訳して吹き替えることができます。
+  - AIによって自動生成された字幕を校正する必要がある場合に便利です。
+  - サポートされている字幕形式: '.ass'、'.ssa'、'.srt'、'.mpl2'、'.tmp'、'.vtt'、'.microdvd'、'.json'
 
 
 ## 特徴
