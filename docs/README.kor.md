@@ -41,6 +41,11 @@ The best gradio web-ui for asr, translation and tts. Easy one click installation
 
 * `Batch` 탭
   - 대량의 파일을 일괄 처리
+ 
+* 'Garage' 탭
+  - 자막 파일 업로드, 번역, 더빙이 가능합니다.
+  - AI가 자동으로 생성한 자막을 교정해야 할 때 유용합니다.
+  - 지원하는 자막 형식: '.ass', '.ssa', '.srt', '.mpl2', '.tmp', '.vtt', '.microdvd', '.json'  
 
 
 
